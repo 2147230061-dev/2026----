@@ -1,0 +1,14 @@
+git 版本控制 找回历史版本 多人协作 本地仓库可上传至 远端仓库github
+
+.gitignore   中输入.env保存在 本地不受git管理
+
+main上创建特性分支feature不影响main线路，适合多人合作整合
+
+从github远程仓库git clone或git fetch ＋git merge到工作区，修改完善后git add＋git commit ＋git push到github（需要管理员同意才能合并到main上）
+
+ discard 的作用是放弃还没有commit的文件更改，只针对未提交的修改，不会影响已经提交的版本记录。
+ 
+ reset 可以将仓库强制回退到某一个历史状态，适合单人使用、还没有推送到远端仓库的分支；它会改动原有提交历史，多人协作时不推荐使用。
+ 
+ revert 会生成一条反向的新commit，用来抵消某次旧提交的改动。它不会修改过往提交记录，适合多人协作的分支，是团队协作里优先推荐的回退方式。
+ 
